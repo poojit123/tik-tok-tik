@@ -1,0 +1,71 @@
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.board-row{
+    display: flex;
+    justify-content: center;
+}
+
+.board-cube{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #ffffff;
+    font-size: xx-large;
+    border-radius: 15px;
+    box-shadow: -2px 4px 3px 1px #e2e2e2;
+    margin: 4px;
+}
+
+.result, .restart{
+    display: flex;
+    justify-content: center;
+}
+
+.result h3{
+    color: white;
+    font-size: 50px;
+    animation: blinker 2.0s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+.restart button{
+    width: 10%;
+    height: 6%;
+    background-color: lightgreen;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 15px;
+}
